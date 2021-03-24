@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'ulster',
+    loadChildren: () => import('./ulster/ulster.module').then( m => m.UlsterPageModule)
+  },
+  {
+    path: 'munster',
+    loadChildren: () => import('./munster/munster.module').then( m => m.MunsterPageModule)
+  },
+  {
+    path: 'connaught',
+    loadChildren: () => import('./connaught/connaught.module').then( m => m.ConnaughtPageModule)
+  },
+  {
+    path: 'connaughtcountys',
+    loadChildren: () => import('./connaughtcountys/connaughtcountys.module').then( m => m.ConnaughtcountysPageModule)
+  },
+  {
+    path: 'lesinster',
+    loadChildren: () => import('./lesinster/lesinster.module').then( m => m.LesinsterPageModule)
+  },
 ];
 
 @NgModule({
